@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.About{
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.About .About-Info{
+    width: 50%;
+}
+
+.About .About-Interactivo{
+    width: 45vw;
+    height: 70vh;
+}
+
+.Banner{
+    width: 90VW;
+    height: 80VH;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.Banner H2{
+    position: relative;
+    font-size: 100px;
+    color: blue;
+    top: 40vh;
+    left: 50vw;
+    width: auto;
+}
