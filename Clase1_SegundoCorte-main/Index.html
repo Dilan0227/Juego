@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Básico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <nav class="navegacion contenedor">
+            <h2>Juego de interacción</h2>
+            <img src="icon.webp" alt="Jugador" class="icono">
+        </nav>
+    </header>
+
+        <main class="contenedor principal">
+                <section class="zona-personajes">
+
+            <div class="jugador">
+                <h3>Jugador</h3>
+                <img id="imgJugador" src="icon.webp" alt="Jugador">
+                <p id="EstadoPlayer">Vida: 100</p>
+            </div>
+
+            <div class="enemigo">
+                <h3>Enemigo</h3>
+                <img id="imgEnemigo" src="enemigo.webp" alt="Enemigo">
+                <p id="EstadoEnemigo">Vida: 100</p>
+            </div>
+
+        </section>
+
+        <section class="zona-botones">
+            <button onclick="atacar()">ATACAR</button>
+            <button onclick="Descansar_Player()">DESCANSAR</button>
+        </section>
+        <section class="zona-mensajes">
+            <p id="mensajes">Comienza el juego...</p>
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

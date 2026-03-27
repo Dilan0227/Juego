@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+.encabezado {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icono {
+    width: 50px;
+}
+
+.principal {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.zona-personajes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jugador, .enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+img {
+    width: 120px;
+}
+
+.zona-botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.zona-mensajes {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#mensajes {
+    background-color: #ddd;
+    padding: 10px;
+}
