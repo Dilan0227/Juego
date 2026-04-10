@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Precolombina 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navegador">
+        <div class="logo">Pagina Precolombina 3D</div>
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#artefacto">Artefacto</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+
+    <header class="encabezado" id="inicio">
+        <div id="contenedor-banner" class="fondo-3d"></div>
+        <div class="texto-banner">
+            <h1>Orfebrería Precolombina</h1>
+            <p>Un viaje a nuestras raíces geométricas</p>
+        </div>
+    </header>
+
+    <section class="seccion-principal" id="artefacto">
+        <div class="info-texto">
+            <h2>La Nariguera</h2>
+            <p>Este objeto representa las joyas de oro usadas por los líderes indígenas. El oro no era símbolo de riqueza económica, sino que representaba la luz del sol y la energía vital.</p>
+            <button class="boton">Ver detalles</button>
+        </div>
+        <div class="visor-3d" id="visor-interactivo"></div>
+    </section>
+
+    <section class="seccion-galeria" id="galeria">
+        <h2>Referencias Históricas</h2>
+        <p>Piezas reales de orfebrería que inspiran nuestro entorno 3D.</p>
+        
+        <div class="contenedor-galeria">
+            <div class="tarjeta">
+                <img src="balsa.jpg" alt="Balsa Muisca">
+                <p>La Balsa Muisca</p>
+            </div>
+            <div class="tarjeta">
+                <img src="pectoral.jpg" alt="Pectoral">
+                <p>Pectoral Tolima</p>
+            </div>
+            <div class="tarjeta">
+                <img src="poporo.jpg" alt="Poporo">
+                <p>Poporo Quimbaya</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <p>Proyecto Universitario - Cultura Precolombina 3D</p>
+    </footer>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js"
+      }
+    }
+    </script>
+    <script type="module" src="fondoBanner.js"></script>
+    <script type="module" src="visorArtefacto.js"></script>
+
+</body>
+</html>
