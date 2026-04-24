@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Precolombina 3D</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navegador navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="logo">Pagina Precolombina 3D</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="menu navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#artefacto">Artefacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="encabezado" id="inicio">
+        <div id="contenedor-banner" class="fondo-3d"></div>
+        <div class="texto-banner position-relative z-1">
+            <h1>Orfebrería Precolombina</h1>
+            <p>Un viaje a nuestras raíces geométricas</p>
+        </div>
+    </header>
+
+    <section class="seccion-principal container py-5" id="artefacto">
+        <div class="row align-items-center">
+            <div class="info-texto col-md-5 mb-4 mb-md-0">
+                <h2>La Nariguera</h2>
+                <p>Este objeto representa las joyas de oro usadas por los líderes indígenas. El oro no era símbolo de riqueza económica, sino que representaba la luz del sol y la energía vital.</p>
+                <button class="boton">Ver detalles</button>
+            </div>
+            <div class="col-md-7">
+                <div class="visor-3d" id="visor-interactivo"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-galeria container py-5" id="galeria">
+        <h2>Referencias Históricas</h2>
+        <p>Piezas reales de orfebrería que inspiran nuestro entorno 3D.</p>
+        
+        <div class="contenedor-galeria row g-4 justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="tarjeta card h-100 border-0">
+                    <img src="balsa.jpg" alt="Balsa Muisca">
+                    <div class="card-body">
+                        <p>La Balsa Muisca</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="tarjeta card h-100 border-0">
+                    <img src="pectoral.jpg" alt="Pectoral">
+                    <div class="card-body">
+                        <p>Pectoral Tolima</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="tarjeta card h-100 border-0">
+                    <img src="poporo.jpg" alt="Poporo">
+                    <div class="card-body">
+                        <p>Poporo Quimbaya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina py-4">
+        <p>Proyecto Universitario - Cultura Precolombina 3D</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js"
+      }
+    }
+    </script>
+    <script type="module" src="fondoBanner.js"></script>
+    <script type="module" src="visorArtefacto.js"></script>
+
+</body>
+</html>
