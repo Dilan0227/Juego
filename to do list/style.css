@@ -1,0 +1,39 @@
+body {
+
+    font-family: Arial;
+
+    background-color: lightgray;
+
+}
+
+#app {
+
+    background-color: white;
+
+    width: 300px;
+
+    padding: 20px;
+
+    margin: auto;
+
+    margin-top: 50px;
+
+}
+
+input {
+
+    padding: 5px;
+
+}
+
+button {
+
+    padding: 5px;
+
+}
+
+li {
+
+    margin-top: 10px;
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Lista de tareas</title>
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>To Do List</h1>
+
+        <input type="text" v-model="tarea">
+
+        <button v-on:click="agregar">
+            Agregar
+        </button>
+
+        <ul>
+
+            <li v-for="(item, i) in tareas">
+
+                {{ item }}
+
+                <button v-on:click="eliminar(i)">
+                    Eliminar
+                </button>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
