@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="#" class="brand">
+                <img src="./logo.png" alt="logo">
+            </a>
+
+            <div class="nav-menu">
+                <ul>
+                    <li><img src="./buscar.png" alt="busqueda"></a></li>
+                    <li><img src="./user.png" alt="user"></a></li>
+                    <li><img src="./compra.png" alt="compra"></a></li>
+                    <li><img src="./noti.png" alt="noti"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            
+                <div class="hero-media media-box">
+                    <img src="./shoppage.png" alt="Main visual">
+                </div>
+            </div>
+        </section>
+
+        <section class="section trust" id="trust">
+            <div id="app">
+
+        <h1>Tienda Online</h1>
+
+        <input type="text"
+               v-model="buscar"
+               placeholder="Buscar producto">
+
+        <div class="productos">
+
+            <div class="card"
+                 v-for="(producto, i) in productosFiltrados"
+                 :key="i">
+
+                <img :src="producto.imagen">
+
+                <h2>{{ producto.nombre }}</h2>
+
+                <p>$ {{ producto.precio }}</p>
+
+                <button v-on:click="agregarCarrito(producto)">
+                    Agregar
+                </button>
+
+            </div>
+
+            <div class="carrito">
+
+            <h2>Carrito</h2>
+
+            <p>Total productos: {{ carrito.length }}</p>
+
+            <ul>
+
+                <li v-for="(item, i) in carrito">
+
+                    {{ item.nombre }} - ${{ item.precio }}
+
+                    <button v-on:click="eliminarProducto(i)">
+                        X
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+                <div class="partners-row">
+                    <span>logopipsum™</span>
+                    <span>logopipsum™</span>
+                    <span>logopipsum™</span>
+                    <span>logopipsum™</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section blog" id="blog">
+            <div class="container">
+                <div class="section-heading centered">
+                    <h2>Latest blog</h2>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="media-box card-box">
+                            <img src="./blanco.png" alt="Blog article 1">
+                        </div>
+                        <h3>Humans are much more smarter than AI</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.</p>
+                        <a href="#">Learn more</a>
+                    </article>
+
+                    <article class="blog-card featured">
+                        <div class="media-box card-box">
+                            <img src="./blanco.png" alt="Blog article 2">
+                        </div>
+                        <h3>Humans are much more smarter than AI</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.</p>
+                        <a href="#">Learn more</a>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="media-box card-box">
+                            <img src="./blanco.png" alt="Blog article 3">
+                        </div>
+                        <h3>Humans are much more smarter than AI</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.</p>
+                        <a href="#">Learn more</a>
+                    </article>
+                </div>
+
+                <div class="center-action">
+                    <button type="button">Button</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-heading centered">
+                    <h2>Our happy clients</h2>
+                </div>
+
+                <div class="testimonial-wrap">
+                    <button class="arrow" type="button">‹</button>
+                    <div class="testimonial-grid">
+                        <article class="testimonial-card">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit, sed do eiusmod tempor incididunt. Blandit mattis nibh etiam non, hac leo dui vulputate tempor consequat pellentesque eu rhoncus. Nunc tortor vel.</p>
+                            <div class="author">
+                                <img src="./logo.png " alt="Client avatar">
+                                <div>
+                                    <strong>Jacqueline Wright</strong>
+                                    <span>Customer</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="testimonial-card">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit, sed do eiusmod tempor incididunt. Blandit mattis nibh etiam non, hac leo dui vulputate tempor consequat pellentesque eu rhoncus. Nunc tortor vel.</p>
+                            <div class="author">
+                                <img src="./logo.png" alt="Client avatar">
+                                <div>
+                                    <strong>Jacqueline Wright</strong>
+                                    <span>Customer</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="arrow" type="button">›</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq" id="faq">
+            <div class="container faq-grid">
+                <div class="media-box faq-box">
+                    <img src="./blanco.png" alt="FAQ image">
+                </div>
+
+                <div class="faq-copy">
+                    <h2>Frequently asked questions</h2>
+                    <div class="faq-list">
+                        <details open>
+                            <summary>Lorem ipsum dolor sit amet consectetur</summary>
+                            <p>Lorem ipsum dolor sit amet consectetur. Pulvinar at accumsan in at sodales condimentum. Gravida dui a neque mauris est vel leo. Tellus felis sed pretium egestas.</p>
+                        </details>
+                        <details>
+                            <summary>Lorem ipsum dolor sit amet consectetur</summary>
+                            <p>Lorem ipsum dolor sit amet consectetur. Pulvinar at accumsan in at sodales condimentum.</p>
+                        </details>
+                        <details>
+                            <summary>Lorem ipsum dolor sit amet consectetur</summary>
+                            <p>Lorem ipsum dolor sit amet consectetur. Pulvinar at accumsan in at sodales condimentum.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div class="container cta-box">
+                <div>
+                    <h2>Need more information?</h2>
+                    <p>Write your concern to us and our specialist will get back to you.</p>
+                </div>
+                <button type="button">Button</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="./logo.avif" alt="logo">
+                <p>Area elementum non habitasse ullamcorper in aliquet odio diam. Urna vitae laoreet.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Heading</h4>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Heading</h4>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Heading</h4>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+                <a href="#">Link here</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect with us</h4>
+                <div class="social-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
