@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Tienda Online</title>
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>Tienda Online</h1>
+
+        <input type="text"
+               v-model="buscar"
+               placeholder="Buscar producto">
+
+        <div class="productos">
+
+            <div class="card"
+                 v-for="(producto, i) in productosFiltrados"
+                 :key="i">
+
+                <img :src="producto.imagen">
+
+                <h2>{{ producto.nombre }}</h2>
+
+                <p>$ {{ producto.precio }}</p>
+
+                <button v-on:click="agregarCarrito(producto)">
+                    Agregar
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="carrito">
+
+            <h2>Carrito</h2>
+
+            <p>Total productos: {{ carrito.length }}</p>
+
+            <ul>
+
+                <li v-for="(item, i) in carrito">
+
+                    {{ item.nombre }} - ${{ item.precio }}
+
+                    <button v-on:click="eliminarProducto(i)">
+                        X
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
